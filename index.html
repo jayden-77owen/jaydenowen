@@ -1,0 +1,437 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="description" content="KulinerNusantara - Pesan makanan autentik Indonesia, cepat & higienis">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>KulinerNusantara 🍛</title>
+</head>
+<body>
+  <div class="bg-mouse" id="bgMouse"></div>
+  <div id="preloader" class="preloader">
+    <div class="loader-content">
+      <div class="loader-icon">🍛</div>
+      <div class="loader-ring"></div>
+      <p class="loader-text">Menyiapkan kelezatan untukmu...</p>
+    </div>
+  </div>
+  <div class="promo-ticker">
+    <div class="ticker-track">
+      <span>🔥 Diskon 50% semua menu nasi</span>
+      <span>🚚 Gratis ongkir min. Rp 50rb</span>
+      <span>🍹 Buy 1 Get 1 jus segar</span>
+      <span>🌟 Rating 4.9/5 dari 10rb+ pelanggan</span>
+    </div>
+  </div>
+  <header class="glass-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🍛</span>
+        <span class="logo-text">KulinerNusantara</span>
+      </a>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn glass" aria-label="Ganti tema">
+          <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+        </button>
+        <button id="wishBtn" class="icon-btn glass">
+          <span class="badge pulse" id="wishCount">0</span>❤️
+        </button>
+        <button id="cartBtn" class="icon-btn glass cart-trigger">
+          <span class="badge pulse" id="cartCount">0</span>🛒
+        </button>
+        <button id="authBtn" class="btn-modern primary">👤 Masuk</button>
+      </div>
+    </div>
+  </header>
+  <section class="hero-slider">
+    <div class="hero-track">
+      <div class="hero-slide active">
+        <div class="hero-bg" style="background-image:url('1-html.jpg')"></div>
+        <div class="hero-content fade-up">
+          <span class="hero-badge text-float">🔥 Promo Hari Ini</span>
+          <h1 class="hero-title">
+            Diskon <span class="text-gradient-animate">50%</span><br>
+            <span class="text-rainbow">Semua Menu Nasi</span>
+          </h1>
+          <p class="hero-desc text-sparkle">Nasi goreng, padang, gudeg, dan lebih banyak lagi. Pesan sekarang!</p>
+          <div class="hero-cta">
+            <button class="btn-modern glow text-bounce" data-scroll="products">🛒 Pesan Sekarang</button>
+            <button class="btn-modern outline" data-scroll="products">📋 Lihat Menu</button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image:url('2-html.webp')"></div>
+        <div class="hero-content fade-up">
+          <span class="hero-badge text-float">🚚 Gratis Ongkir</span>
+          <h1 class="hero-title">Bebas Ongkir<br><span class="text-gradient-animate">Min. Belanja 50rb</span></h1>
+          <div class="hero-cta"><button class="btn-modern glow" data-scroll="products">🎁 Klaim Promo</button></div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image:url('3-html.jpeg')"></div>
+        <div class="hero-content fade-up">
+          <span class="hero-badge text-float">🍹 Fresh & Healthy</span>
+          <h1 class="hero-title">Jus Segar<br><span class="text-rainbow">Buy 1 Get 1</span></h1>
+          <div class="hero-cta"><button class="btn-modern glow" data-scroll="products">🍹 Pesan Jus</button></div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-nav prev">❮</button>
+    <button class="hero-nav next">❯</button>
+    <div class="hero-dots">
+      <button class="dot active" data-slide="0"></button>
+      <button class="dot" data-slide="1"></button>
+      <button class="dot" data-slide="2"></button>
+    </div>
+  </section>
+  <section class="search-section glass-panel">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Cari makanan, minuman, atau paket..." class="search-input">
+      <button class="btn-modern icon" aria-label="Cari">🔍</button>
+    </div>
+    <div class="filter-bar">
+      <select id="sortFilter" class="filter-select">
+        <option value="popular">🌟 Terpopuler</option>
+        <option value="cheap">💰 Termurah</option>
+        <option value="expensive">💎 Termahal</option>
+        <option value="rating">🏆 Rating Tertinggi</option>
+      </select>
+    </div>
+  </section>
+  <main id="products" class="products-section"> 
+    <div class="section-header">
+      <h2 class="text-bounce">Menu Pilihan</h2>
+    </div>
+    <div class="main-category-tabs">
+      <button class="main-tab-btn active" data-main-category="all">
+        <span class="tab-icon">📦</span>
+        <span class="tab-text">Semua</span>
+      </button>
+      <button class="main-tab-btn" data-main-category="makanan">
+        <span class="tab-icon">🍛</span>
+        <span class="tab-text">Makanan</span>
+      </button>
+      <button class="main-tab-btn" data-main-category="minuman">
+        <span class="tab-icon">🍺</span>
+        <span class="tab-text">Minuman</span>
+      </button>
+      <button class="main-tab-btn" data-main-category="camilan">
+        <span class="tab-icon">🍢</span>
+        <span class="tab-text">Camilan</span>
+      </button>
+      <button class="main-tab-btn" data-main-category="dessert">
+        <span class="tab-icon">🍮</span>
+        <span class="tab-text">Dessert</span>
+      </button>
+      <button class="main-tab-btn" data-main-category="roti">
+        <span class="tab-icon">🍞</span>
+        <span class="tab-text">Roti</span>
+      </button>
+    </div>   
+    <div id="submenuContainer" class="submenu-wrapper" style="display:none">
+      <div class="submenu-tabs" id="submenuTabs"></div>
+    </div>
+    <div id="productGrid" class="product-grid"></div>
+    <div class="load-more-wrapper">
+      <button id="loadMore" class="btn-modern secondary">✨ Load More</button>
+    </div>
+  </main>
+  <footer class="footer-premium">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🍛 KulinerNusantara</div>
+        <p>Platform e-commerce makanan terpercaya dengan bahan berkualitas.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Instagram"><span>📷</span><span class="social-tooltip">Instagram</span></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><span>📘</span><span class="social-tooltip">Facebook</span></a>
+          <a href="#" class="social-btn" aria-label="TikTok"><span>🎵</span><span class="social-tooltip">TikTok</span></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><span>📺</span><span class="social-tooltip">YouTube</span></a>
+        </div>
+      </div>
+      <div class="footer-links"><h4>Kategori</h4><a href="#" data-cat="nasi">Nasi</a><a href="#" data-cat="mie">Mie</a><a href="#" data-cat="jus">Jus</a><a href="#" data-cat="kopi">Kopi</a></div>
+      <div class="footer-links"><h4>💬 Bantuan</h4><a href="#">Cara Pemesanan</a><a href="#">Pembayaran</a><a href="#">Pengiriman</a><a href="#">Privasi</a></div>
+      <div class="footer-contact"><h4>📞 Kontak</h4><p>📍 Jakarta Selatan</p><p>📞 0821-6078-9421</p><p>✉️ support@kuliner.id</p></div>
+    </div>
+  </footer>
+  <div id="authModal" class="modal">
+    <div class="auth-container">
+      <button class="modal-close" onclick="Auth.close()">&times;</button>
+      <div class="auth-panel-wrapper">
+        <div class="auth-panel login-panel">
+          <div class="auth-form-container">
+            <h2>Login</h2>
+            <div class="social-login">
+              <button class="social-btn">f</button>
+              <button class="social-btn">G</button>
+              <button class="social-btn">🐙</button>
+              <button class="social-btn">in</button>
+            </div>
+            <p class="social-text">atau gunakan akun Anda</p>
+            <form id="loginForm" class="auth-form">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" required placeholder="email@contoh.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <div class="password-input-wrapper">
+                  <input type="password" id="loginPass" required minlength="8" placeholder="Minimal 8 karakter" 
+                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" 
+                         title="Password harus mengandung huruf besar, huruf kecil, dan angka">
+                  <label class="password-checkbox">
+                    <input type="checkbox" onchange="togglePassword('loginPass', this)">
+                    <span class="checkmark">✓</span>
+                  </label>
+                </div>
+                <small class="password-hint">Minimal 8 karakter, huruf besar, dan angka</small>
+              </div>
+              <a href="#" class="forgot-password">Lupa Password?</a>
+              <button type="submit" class="btn-modern primary full">LOGIN</button>
+            </form>
+          </div>
+        </div>       
+        <div class="auth-panel register-panel">
+          <div class="auth-form-container">
+            <h2>Registration</h2>
+            <div class="social-login">
+              <button class="social-btn">f</button>
+              <button class="social-btn">G</button>
+              <button class="social-btn">🐙</button>
+              <button class="social-btn">in</button>
+            </div>
+            <p class="social-text">atau gunakan email untuk registrasi</p>
+            <form id="registerForm" class="auth-form">
+              <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" id="authName" required placeholder="Nama Lengkap">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="authEmail" required placeholder="email@contoh.com" 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       title="Masukkan email yang valid">
+              </div>
+              <div class="form-group password-strength-group">
+                <label>Password</label>
+                <div class="password-input-wrapper">
+                  <input type="password" id="authPass" required minlength="8" placeholder="Minimal 8 karakter"
+                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                         title="Password harus mengandung huruf besar, huruf kecil, dan angka">
+                  <label class="password-checkbox">
+                    <input type="checkbox" onchange="togglePassword('authPass', this)">
+                    <span class="checkmark">✓</span>
+                  </label>
+                </div>               
+                <div class="strength-meter">
+                  <div class="strength-segments">
+                    <span class="strength-segment" id="segment0"></span>
+                    <span class="strength-segment" id="segment1"></span>
+                    <span class="strength-segment" id="segment2"></span>
+                    <span class="strength-segment" id="segment3"></span>
+                  </div>
+                  <div class="strength-text" id="strengthText">Enter a password</div>
+                </div>              
+                <ul class="password-requirements">
+                  <li id="req-length">✓ Minimal 8 karakter</li>
+                  <li id="req-upper">✓ Huruf besar</li>
+                  <li id="req-number">✓ Angka</li>
+                  <li id="req-special">✓ Karakter khusus</li>
+                </ul>
+                <span class="caps-warning" id="capsWarning">⚠️ Caps Lock ON</span>              
+                <small class="password-hint">Minimal 8 karakter, huruf besar, dan angka</small>
+              </div>
+              <button type="submit" class="btn-modern primary full">REGISTER</button>
+            </form>
+          </div>
+        </div>        
+        <div class="overlay-panel" id="overlayPanel">
+          <div class="overlay-content" id="overlayContent">
+            <div class="overlay-login">
+              <h2>Hello, Welcome!</h2>
+              <p>Masukkan detail pribadi Anda dan mulai perjalanan bersama kami</p>
+              <button class="btn-modern outline ghost" onclick="Auth.switchPanel('register')">REGISTER</button>
+            </div>
+            <div class="overlay-register">
+              <h2>Welcome Back!</h2>
+              <p>Untuk tetap terhubung dengan kami, silakan login dengan info pribadi Anda</p>
+              <button class="btn-modern outline ghost" onclick="Auth.switchPanel('login')">LOGIN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="quickViewModal" class="modal">
+    <div class="modal-content quickview-content glass-modal">
+      <button class="modal-close" onclick="QuickView.close()">&times;</button>
+      <div class="quickview-grid">
+        <div class="quickview-image">
+          <img id="qvImage" src="" alt="" loading="eager">
+          <div class="qv-badge" id="qvBadge" style="display:none"></div>
+        </div>
+        <div class="quickview-info">
+          <div class="qv-header">
+            <h3 id="qvTitle"></h3>
+            <div class="qv-rating" id="qvRating"></div>
+          </div>
+          <p class="qv-desc" id="qvDesc"></p>
+          <div class="qv-delivery"><span>🚚</span><strong id="qvDelivery"></strong></div>
+          <div class="qv-price"><span class="price-large" id="qvPrice"></span><span class="price-note">Termasuk PPN</span></div>
+          <div class="qv-quantity">
+            <label>Jumlah:</label>
+            <div class="qty-control">
+              <button class="qty-btn" data-action="decrease">−</button>
+              <input type="number" id="qvQty" value="1" min="1" max="20">
+              <button class="qty-btn" data-action="increase">+</button>
+            </div>
+          </div>
+          <div class="qv-actions">
+            <button id="qvAddToCart" class="btn-modern primary btn-lg">🛒 Tambah</button>
+            <button id="qvAddToWish" class="btn-modern outline btn-lg">❤️ Wishlist</button>
+          </div>
+          <div class="qv-meta"><p>✅ Bahan segar</p><p>✅ Higienis</p><p>✅ Garansi uang kembali</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wishlistModal" class="modal">
+    <div class="modal-content glass-modal">
+      <button class="modal-close" onclick="Wishlist.close()">&times;</button>
+      <div class="modal-header">
+        <h2>❤️ Wishlist Saya</h2>
+      </div>
+      <div id="wishlistItems" class="cart-items"></div>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay" onclick="Cart.toggle(false)"></div>
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header glass">
+      <h3>🛒 Keranjang Belanja</h3>
+      <button id="closeCart" class="close-btn" onclick="Cart.toggle(false)">&times;</button>
+    </div>
+    <div class="cart-body">
+      <div class="coupon-section glass" style="padding:12px;margin-bottom:15px;border-radius:12px;display:flex;gap:8px">
+        <input type="text" id="couponInput" placeholder="Kode promo" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.1)">
+        <button id="applyCoupon" class="btn-modern primary" style="padding:10px 14px;border-radius:8px">Pakai</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+    </div>
+    <div class="cart-footer glass">
+      <div class="cart-summary">
+        <div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">Rp 0</strong></div>
+        <div class="summary-row"><span>Ongkir</span><strong id="cartShipping">Gratis</strong></div>
+        <div class="summary-row" id="discountRow" style="display:none"><span>Diskon</span><strong id="cartDiscount" style="color:#2a9d8f">- Rp 0</strong></div>
+        <div class="summary-row total"><span>Total</span><strong id="cartTotal">Rp 0</strong></div>
+      </div>
+      <button id="checkoutBtn" class="btn-modern primary btn-lg full" disabled onclick="Checkout.open()">📦 Checkout</button>
+      <button id="clearCart" class="btn-modern text" onclick="Cart.clear()">👜 Kosongkan</button>
+    </div>
+  </div>
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content checkout-content glass-modal">
+      <button class="modal-close" onclick="Checkout.close()">&times;</button>
+      <div class="checkout-header">
+        <h2>📦 Checkout</h2>
+        <div class="checkout-steps">
+          <span class="step active">1. Alamat</span>
+          <span class="step">2. Pembayaran</span>
+          <span class="step">3. Konfirmasi</span>
+        </div>
+      </div>
+      <form id="checkoutForm" class="checkout-form">
+        <fieldset id="stepAddress" class="checkout-step active">
+          <legend>📍 Alamat</legend>
+          <div class="form-group"><label>Nama</label><input type="text" id="recvName" required></div>
+          <div class="form-group"><label>HP</label><input type="tel" id="recvPhone" required></div>
+          <div class="form-group"><label>Alamat</label><textarea id="recvAddress" required rows="3"></textarea></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Kota</label>
+              <select id="recvCity" required>
+                <option value="">Pilih</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="bogor">Bogor</option>
+                <option value="depok">Depok</option>
+                <option value="tangerang">Tangerang</option>
+                <option value="bekasi">Bekasi</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Kode Pos</label><input type="text" id="recvZip" placeholder="12345"></div>
+          </div>
+          <button type="button" class="btn-modern primary full" onclick="nextStep(2)">Lanjut →</button>
+        </fieldset>
+        <fieldset id="stepPayment" class="checkout-step">
+          <legend>💳 Pembayaran</legend>
+          <div class="payment-methods">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="qris" checked>
+              <div class="payment-card"><span>📱</span><div><strong>QRIS</strong><small>Scan 1 menit</small></div></div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="cod">
+              <div class="payment-card"><span>💵</span><div><strong>COD</strong><small>Bayar di tempat</small></div></div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="transfer">
+              <div class="payment-card"><span>🏦</span><div><strong>Transfer</strong><small>BCA/Mandiri/BRI</small></div></div>
+            </label>
+          </div>
+          <div class="shipping-info glass">
+            <p>🚚 Ongkir: <span id="checkoutShipping">Gratis</span></p>
+            <p>⏱️ Estimasi: 30-45 menit</p>
+          </div>
+          <div class="checkout-nav">
+            <button type="button" class="btn-modern outline" onclick="nextStep(1)">← Kembali</button>
+            <button type="button" class="btn-modern primary" onclick="nextStep(3)">Review →</button>
+          </div>
+        </fieldset>
+        <fieldset id="stepConfirm" class="checkout-step">
+          <legend>✅ Konfirmasi</legend>
+          <div class="order-summary glass">
+            <h4>📋 Ringkasan</h4>
+            <div id="checkoutItems"></div>
+            <div class="summary-divider"></div>
+            <div class="summary-row"><span>Subtotal</span><strong id="confirmSubtotal">Rp 0</strong></div>
+            <div class="summary-row"><span>Ongkir</span><strong id="confirmShipping">Gratis</strong></div>
+            <div class="summary-row" id="confirmDiscountRow" style="display:none"><span>Diskon</span><strong id="confirmDiscount" style="color:#2a9d8f">- Rp 0</strong></div>
+            <div class="summary-row total"><span>Total</span><strong id="confirmTotal">Rp 0</strong></div>
+          </div>
+          <label class="checkbox-group">
+            <input type="checkbox" id="agreeTerms" required>
+            <span>Saya setujui <a href="#">Syarat & Ketentuan</a></span>
+          </label>
+          <div class="checkout-nav">
+            <button type="button" class="btn-modern outline" onclick="nextStep(2)">← Edit</button>
+            <button type="submit" class="btn-modern primary btn-lg full">🎉 Bayar Sekarang</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <a href="https://wa.me/6282160789421" class="wa-float" target="_blank" rel="noopener">
+    <span>💬</span><span class="wa-text">Chat WA</span>
+  </a>  
+  <nav class="mobile-nav glass">
+    <button class="nav-item active" data-page="home">
+      <span class="nav-icon">🏠</span><span class="nav-label">Beranda</span>
+    </button>
+    <button class="nav-item" data-page="search">
+      <span class="nav-icon">🔍</span><span class="nav-label">Cari</span>
+    </button>
+    <button class="nav-item" id="mobCart">
+      <span class="nav-icon">🛒</span><span class="nav-label">Keranjang</span>
+      <span id="mobCartBadge" class="nav-badge">0</span>
+    </button>
+    <button class="nav-item" id="mobProfile">
+      <span class="nav-icon">👤</span><span class="nav-label">Akun</span>
+    </button>
+  </nav>  
+  <div id="toastContainer" class="toast-container"></div>
+  <div id="flyElement" class="fly-element"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
